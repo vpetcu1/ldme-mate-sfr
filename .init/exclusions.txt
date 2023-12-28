@@ -1,0 +1,6 @@
+sfr
+Downloads
+Documents
+.cache
+Trash
+.profile

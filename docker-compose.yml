@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  ldme-mate-sfr :
+    image: "vpetcu1/ldme-base:${TAG}"
+    container_name: "${PROJECT}"
+    hostname: ${PROJECT}
+    restart: "no"
+    environment:
+    - PASSWORD=password
+    - USER=desktop
+    cap_add:
+    - SYS_PTRACE
+    stdin_open: true
+    tty: true
+    ports:
+      - "24:22"
+      - "4502:4502"
+      - "80:80"
+      - "3000:3000"
+      - "4004:4000"
+    volumes:
+      #- "/etc/timezone:/etc/timezone:ro"
+      #- "/etc/localtime:/etc/localtime:ro"
+      - "./${PROJECT}/:/home/desktop/${PROJECT}/"
+      #- /var/run/docker.sock:/var/run/docker.sock
+      - "./home/:/home/desktop"
+      #- "./.init/:/home/desktop/.init/"
+      - "./.profile/:/home/desktop/.profile"
+    shm_size: '2gb'
+    privileged: true
+
