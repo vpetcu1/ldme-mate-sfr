@@ -11,7 +11,8 @@ IF "%operation%" == "start" (
     copy .profile home\.profile
     robocopy .config home\.config /e
     robocopy .init home\.init /e
-    set COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose up --remove-orphans --force-recreate
+    echo %PROJECT%
+    set COMPOSE_PROJECT_NAME=%PROJECT% && docker-compose up --remove-orphans --force-recreate
 ) ELSE (
 	IF "%operation%" == "stop" (
 	    docker-compose down
