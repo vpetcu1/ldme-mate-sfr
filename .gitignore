@@ -3,3 +3,4 @@
 installHost/win10/DockerInstaller.exe
 installHost/win10/nomachine.exe
 installHost/win10/wsl_update_x64.msi
+installHost/ubuntu/nomachine.deb
