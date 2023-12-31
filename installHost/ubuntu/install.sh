@@ -14,4 +14,7 @@ sudo groupadd docker &&
 sudo usermod -aG docker $USER && 
 newgrp docker && 
 sudo docker run hello-world
-curl https://download.nomachine.com/download/8.10/Linux/nomachine_8.10.1_1_amd64.deb -o nomachine.deb && sudo dpkg -i nomachine.deb
+if [ ! -f nomachine.deb ]; then
+    curl https://download.nomachine.com/download/8.10/Linux/nomachine_8.10.1_1_amd64.deb -o nomachine.deb 
+fi
+sudo dpkg -i nomachine.deb

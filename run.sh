@@ -10,6 +10,7 @@ case $operation in
         cp .profile home/.profile
         cp -R .config/ home/
         cp -R .init/ home/
+        cp -R .installProjects/ home/
         COMPOSE_PROJECT_NAME=${PROJECT} docker-compose up --remove-orphans --force-recreate &
 		;;
 	stop)
