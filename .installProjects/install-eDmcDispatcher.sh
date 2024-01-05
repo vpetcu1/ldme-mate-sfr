@@ -9,6 +9,7 @@ echo ###############################
 echo # Install bower
 echo ###############################
 cd $PROJECT_HOME/src/main/webapp
+npm config set strict-ssl false
 npm i -g bower
 echo ###############################
 echo # Install npm packages
