@@ -11,6 +11,7 @@ IF "%operation%" == "start" (
     copy .profile home\.profile
     robocopy .config home\.config /e
     robocopy .init home\.init /e
+    robocopy .installProjects home\.installProjects /e
     echo %PROJECT%
     set COMPOSE_PROJECT_NAME=%PROJECT%
     docker-compose up --remove-orphans --force-recreate
