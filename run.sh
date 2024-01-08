@@ -1,4 +1,5 @@
 operation=$1
+source ./.env
 case $operation in 
 	start)
         if [ ! -d ${PROJECT} ]; then
@@ -16,8 +17,10 @@ case $operation in
 	stop)
 		docker-compose down
 		;;
+	pull)
+        docker pull vpetcu1/ldme-mate-base:${TAG}
+        ;;
 	*)
-		echo "Must pass one of the args start|stop"
+		echo "Must pass one of the args start|stop|pull"
 		;;
 esac
-

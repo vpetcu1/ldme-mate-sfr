@@ -13,11 +13,11 @@ IF "%operation%" == "start" (
     robocopy .init home\.init /e
     echo %PROJECT%
     set COMPOSE_PROJECT_NAME=%PROJECT% && docker-compose up --remove-orphans --force-recreate
-) ELSE (
-	IF "%operation%" == "stop" (
+) ELSE IF "%operation%" == "stop" (
 	    docker-compose down
-	) ELSE (
-	    echo "Must pass one of the args start|stop"
-	)
+) ELSE IF "%operation%" == "pull" (
+	    docker pull vpetcu1/ldme-mate-base:%TAG%
+) ELSE (
+    echo "Must pass one of the args start|stop"
 )
 
