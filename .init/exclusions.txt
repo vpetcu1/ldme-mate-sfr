@@ -4,3 +4,4 @@ Documents
 .cache
 Trash
 .profile
+_cacache
