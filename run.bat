@@ -16,7 +16,8 @@ IF "%operation%" == "start" (
     set COMPOSE_PROJECT_NAME=%PROJECT%
     docker-compose up --remove-orphans --force-recreate
 ) ELSE IF "%operation%" == "stop" (
-	    docker-compose down
+    set COMPOSE_PROJECT_NAME=%PROJECT%
+    docker-compose down --rmi local
 ) ELSE IF "%operation%" == "pull" (
 	    docker pull vpetcu1/ldme-mate-base:%TAG%
 ) ELSE (

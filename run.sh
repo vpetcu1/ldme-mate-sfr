@@ -12,10 +12,10 @@ case $operation in
         cp -R .config/ home/
         cp -R .init/ home/
         cp -R .installProjects/ home/
-        COMPOSE_PROJECT_NAME=${PROJECT} docker-compose up --remove-orphans --force-recreate &
+        COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose up --remove-orphans --force-recreate &
 		;;
 	stop)
-		docker-compose down
+		COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose down --rmi local
 		;;
 	pull)
         docker pull vpetcu1/ldme-mate-base:${TAG}
