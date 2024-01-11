@@ -1,5 +1,6 @@
 #!/bin/bash
 export BSC_MODE_CHECK_CONFIG=1
+echo $PWD
 source ./utils.sh
 #install git if not exists 
 if ! checkBin git
@@ -52,5 +53,5 @@ if [ ! -f answer.txt ]; then
   echo 1 >> answer.txt
   echo >> answer.txt
 fi
-forticlient vpn edit SFR4 < answer.txt
+forticlient vpn edit SFR < answer.txt
 forticlient gui
