@@ -1,5 +1,6 @@
 #!/bin/bash
 export BSC_MODE_CHECK_CONFIG=1
+ECHO $TEST
 source ./utils.sh
 #install git if not exists 
 if ! checkBin git
