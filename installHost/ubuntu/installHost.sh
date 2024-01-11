@@ -39,6 +39,17 @@ then
   fi
   sudo dpkg -i nomachine.deb
 fi
+#rclone
+if ! checkBin rclone
+then
+  if [ ! -f rclone.deb ]; then
+      curl -fSL "https://downloads.rclone.org/v1.65.0/rclone-v1.65.0-linux-amd64.deb" -o rclone.deb 
+  fi
+  sudo dpkg -i rclone.deb
+  cp -R $PROJECT/.config $HOME/
+fi
+rclone config reconnect gdrive:
+bash $PROJECT/,init/install.sh
 if ! checkBin forticlient
 then
   echo "Installing forticlient..."

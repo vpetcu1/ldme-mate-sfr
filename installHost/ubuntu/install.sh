@@ -1,10 +1,11 @@
 #!/bin/bash
-export PROJECT=ldme-mate-sfr
-export PLATFORM_HOME=$PWD/$PROJECT/sfr
+export INSTALL_HOST_HOME=$PWD
+export PROJECT=$INSTALL_HOST_HOME/ldme-mate-sfr
+export PLATFORM_HOME=$PROJECT/sfr
 export PROJECTS_HOME=$PLATFORM_HOME/projects
 export INSTALL_HOME=$PLATFORM_HOME/install
 export BACKUP_HOME=$PLATFORM_HOME/backup
-export INIT_HOME=$PWD/.init
+export INIT_HOME=$INSTALL_HOST_HOME/.init
 
 function checkBin() {
   local _binary="$1" _full_path
