@@ -35,6 +35,6 @@ then
   echo "Installing git..."
   sudo apt-get update && sudo apt-get install git -y
 fi
-git clone https://github.com/vpetcu1/ldme-mate-sfr.git4
+git clone https://github.com/vpetcu1/ldme-mate-sfr.git
 cd $PROJECT/installHost/ubuntu/
 bash installHost.sh
