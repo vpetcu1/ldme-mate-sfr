@@ -31,4 +31,3 @@ for val in $list; do
     cd $INIT_HOME
     sh download.sh $val &
 done
-read

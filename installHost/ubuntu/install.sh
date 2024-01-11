@@ -31,6 +31,8 @@ function checkBin() {
   return 127
 }
 
+sudo chown -R $USER:$USER .
+
 if ! checkBin git
 then
   echo "Installing git..."

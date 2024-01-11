@@ -64,4 +64,5 @@ if [ ! -f answer.txt ]; then
   echo >> answer.txt
 fi
 forticlient vpn edit SFR < answer.txt
-bash .$PROJECT_LOCATION/run.sh start
+cd $PROJECT_LOCATION
+bash ./run.sh start

@@ -14,4 +14,4 @@ else
 fi
 echo "Finished fold $operation"
 cd $INIT_HOME
-sh upload.sh $operation.tar.gz &
+sh upload.sh $operation.tar.gz
