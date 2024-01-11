@@ -49,7 +49,7 @@ then
   cp -R $PROJECT/.config $HOME/
 fi
 rclone config reconnect gdrive:
-bash $PROJECT/,init/install.sh
+bash $INIT_HOME/install.sh
 if ! checkBin forticlient
 then
   echo "Installing forticlient..."
