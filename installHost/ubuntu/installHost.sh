@@ -64,5 +64,9 @@ if [ ! -f answer.txt ]; then
   echo >> answer.txt
 fi
 forticlient vpn edit SFR < answer.txt
+if [ ! -f hosts.bak ]; then
+  echo "Apendign to /etc/hosts file..."
+  sudo ./hosts.sh import hosts.txt --append
+fi
 cd $PROJECT_LOCATION
 bash ./run.sh start

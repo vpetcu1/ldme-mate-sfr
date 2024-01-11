@@ -1,0 +1,13 @@
+#SFR
+10.38.11.9 confluence.jmsp.prod
+10.38.3.186 gitlab.gnp.les800
+10.38.27.105 jenkins.dev.produit.gnp.les800
+10.85.49.145 confluence-jmsp.private.sfr.com
+10.38.16.6 vi-mcc-mydis-201.adm.gnp.les800
+10.38.16.8 vi-mcc-myar-201.adm.gnp.les800
+10.38.16.69 vi-mcc-mydis-301.adm.gnp.les800
+10.38.29.75 vp-mcc-dmc-201.adm.gnp.les800
+10.38.3.110 cp-mut-adxw.gnp.les800
+10.38.28.143 vi-mcc-dmc-201.adm.gnp.les800
+10.38.3.56 sp-mut-adm-201.adm.gnp.les800
+
