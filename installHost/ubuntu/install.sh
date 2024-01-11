@@ -1,3 +1,4 @@
+#!/bin/bash
 function checkBin() {
   local _binary="$1" _full_path
 
@@ -27,4 +28,4 @@ then
 fi
 git clone https://github.com/vpetcu1/ldme-mate-sfr.git4
 cd ldme-mate-sfr/installHost/ubuntu/
-sh installHost.sh
+bash installHost.sh

@@ -38,4 +38,3 @@ if [ -d "$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin" ] ; then
   PATH="$PATH:$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin"
 fi
 export CATALINA_HOME=$INSTALL_HOME/tomcat/apache-tomcat-7.0.109
-sh ~/.init/login.sh
