@@ -29,5 +29,5 @@ elif ! exists_in_list "$OPTIONS" " " $option; then
 fi
 for val in $list; do
     cd $INIT_HOME
-    sh download.sh $val &
+    sh download.sh $val
 done
