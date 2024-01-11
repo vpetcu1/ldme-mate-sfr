@@ -1,6 +1,5 @@
 #!/bin/bash
 export BSC_MODE_CHECK_CONFIG=1
-echo $TEST
 source ./utils.sh
 #install git if not exists 
 if ! checkBin git
@@ -42,13 +41,13 @@ fi
 #rclone
 if ! checkBin rclone
 then
+  echo "Installing rclone..."
   if [ ! -f rclone.deb ]; then
       curl -fSL "https://downloads.rclone.org/v1.65.0/rclone-v1.65.0-linux-amd64.deb" -o rclone.deb 
   fi
   sudo dpkg -i rclone.deb
   cp -R $PROJECT/.config $HOME/
 fi
-rclone config reconnect gdrive:
 bash $INIT_HOME/install.sh
 if ! checkBin forticlient
 then
@@ -65,4 +64,4 @@ if [ ! -f answer.txt ]; then
   echo >> answer.txt
 fi
 forticlient vpn edit SFR < answer.txt
-forticlient gui
+bash ./$PROJECT_LOCATION/run.sh start

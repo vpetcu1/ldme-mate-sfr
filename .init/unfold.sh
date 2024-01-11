@@ -5,6 +5,7 @@ folder="$INSTALL_HOME"
 if [ "$operation" = "desktop" ]; then
     folder=$PROJECT_HOME_FOLDER
 fi
+mkdir -p $folder 
 cd $folder
 tar --overwrite -xzf $BACKUP_HOME/$operation.tar.gz &
 echo "Finished unfold $operation"
