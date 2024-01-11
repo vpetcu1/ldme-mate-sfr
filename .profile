@@ -38,3 +38,8 @@ if [ -d "$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin" ] ; then
   PATH="$PATH:$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin"
 fi
 export CATALINA_HOME=$INSTALL_HOME/tomcat/apache-tomcat-7.0.109
+
+#VSCode
+if [ -d "$INSTALL_HOME/vscode/VSCode-linux-x64" ] ; then
+  PATH="$PATH:$INSTALL_HOME/vscode/VSCode-linux-x64"
+fi

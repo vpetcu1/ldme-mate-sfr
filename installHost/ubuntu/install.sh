@@ -28,5 +28,4 @@ then
 fi
 git clone https://github.com/vpetcu1/ldme-mate-sfr.git4
 cd ldme-mate-sfr/installHost/ubuntu/
-export TEST=BLA
 bash installHost.sh
