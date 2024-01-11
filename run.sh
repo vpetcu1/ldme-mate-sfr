@@ -10,6 +10,7 @@ case $operation in
             mkdir -p home
         fi
         cp .profile home/.profile
+        cp .bashrc home/.bashrc
         cp -R .config/ home/
         cp -R .init/ home/
         cp -R .installProjects/ home/

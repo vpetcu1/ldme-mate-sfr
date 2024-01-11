@@ -7,6 +7,5 @@ if [ "$operation" = "desktop" ]; then
 fi
 mkdir -p $folder 
 cd $folder
-sudo chown -R $USER:$USER *
 tar --overwrite -xzf $BACKUP_HOME/$operation.tar.gz
 echo "Finished unfold $operation"
