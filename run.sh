@@ -2,6 +2,7 @@ operation=$1
 source ./.env
 case $operation in 
 	start)
+        sudo chown -R $USER:$USER ldme-mate-sfr
         if [ ! -d ${PROJECT} ]; then
             mkdir -p ${PROJECT}
         fi

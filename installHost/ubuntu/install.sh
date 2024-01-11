@@ -1,4 +1,11 @@
 #!/bin/bash
+export PROJECT=ldme-mate-sfr
+export PLATFORM_HOME=$PWD/$PROJECT/sfr
+export PROJECTS_HOME=$PLATFORM_HOME/projects
+export INSTALL_HOME=$PLATFORM_HOME/install
+export BACKUP_HOME=$PLATFORM_HOME/backup
+export INIT_HOME=$PWD/.init
+
 function checkBin() {
   local _binary="$1" _full_path
 
@@ -27,5 +34,5 @@ then
   sudo apt-get update && sudo apt-get install git -y
 fi
 git clone https://github.com/vpetcu1/ldme-mate-sfr.git4
-cd ldme-mate-sfr/installHost/ubuntu/
+cd $PROJECT/installHost/ubuntu/
 bash installHost.sh
