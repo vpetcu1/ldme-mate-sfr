@@ -10,4 +10,7 @@
 10.38.3.110 cp-mut-adxw.gnp.les800
 10.38.28.143 vi-mcc-dmc-201.adm.gnp.les800
 10.38.3.56 sp-mut-adm-201.adm.gnp.les800
-
+10.217.24.222 intranet800-val.pfv.private.sfr.com
+10.38.28.132 vi-mcc-ecc-201.adm.gnp.les800
+10.38.11.8 jira.jmsp.prod
+10.38.28.101 fi-mcc-ora-302.int.gnp.les800

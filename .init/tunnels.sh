@@ -1,5 +1,17 @@
 #!/bin/bash
-#author: Diana Pinho
+create_tunnels () {
+	echo ------------ OPENNING TUNELS
+	echo ------------ OPENNING MySQL on 3606 localhost
+	sshpass -p "$password" ssh -Nf -4 -L 3606:vi-mcc-mydis-201:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
+	echo ------------ OPENNING MySQL on 3607 localhost
+	sshpass -p "$password" ssh -Nf -4 -L 3607:vi-mcc-myar-201:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
+	echo ------------ OPENNING Oracle on 1521 localhost
+	sshpass -p "$password" ssh -Nf -L1521:sv-mut-ora-202.int.gnp.les800:1521 "$username"@vi-mcc-dmc-201.adm.gnp.les800
+	echo ------------ OPENNING Oracle on 1522 localhost
+	sshpass -p "$password" ssh -Nf -L1522:fi-mcc-ora-302.int.gnp.les800:1522 "$username"@vi-mcc-dmc-201.adm.gnp.les800
+	echo ------------ OPENNING SSHUTLE on LDAP
+	sshuttle -r "$username:$password"@vp-mcc-dmc-201.adm.gnp.les800 10.40.66.4/32 --disable-ipv6
+}
 
 input_start(){
 	echo 
@@ -14,6 +26,8 @@ input_start(){
 		then 
 			echo PLEASE INSERT USERNAME
 			read username
+			echo PLEASE INSERT PASSWORD
+			read password
 	fi
 }
 
@@ -24,7 +38,7 @@ while [ $selected != 5 ]
 do
 	if [ $selected = 1 ]
 		then 
-			echo ------------ OPEN TUNELS
+			echo ------------ OPENED TUNELS
 			ps -ef | grep ssh
 			
 	elif [ $selected = 2 ]
@@ -33,23 +47,12 @@ do
 			killall ssh
 	elif [ $selected = 3 ]
 		then
-			echo ------------ OPENNING TUNELS
-			echo ------------ OPENNING MySQL on 3606 localhost
-			ssh -Nf -4 -L 3606:vi-mcc-mydis-201:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
-			echo ------------ OPENNING MySQL on 3607 localhost
-			ssh -Nf -4 -L 3607:vi-mcc-myar-201:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
-			echo ------------ OPENNING SSHUTLE on LDAP
-			sshuttle -r "$username"@vp-mcc-dmc-201.adm.gnp.les800 10.40.66.4/32 --disable-ipv6
+			create_tunnels
 	elif [ $selected = 4 ]
 		then
 			echo ------------ KILLING AND OPENNING TUNELS
 			killall ssh
-			echo ------------ OPENNING MySQL on 3606 localhost
-			ssh -Nf -4 -L 3606:vi-mcc-mydis-201:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
-			echo ------------ OPENNING MySQL on 3607 localhost
-			ssh -Nf -4 -L 3607:vi-mcc-myar-201:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
-			echo ------------ OPENNING SSHUTLE on LDAP
-			sshuttle -r "$username"@vp-mcc-dmc-201.adm.gnp.les800 10.40.66.4/32 --disable-ipv6
+			create_tunnels
 			ps -ef | grep ssh	
 	fi
 input_start

@@ -23,7 +23,7 @@ services:
       #- "/etc/timezone:/etc/timezone:ro"
       #- "/etc/localtime:/etc/localtime:ro"
       - "./${PROJECT}/:/home/desktop/${PROJECT}/"
-      #- /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
       - "./home/:/home/desktop"
       #- "./.init/:/home/desktop/.init/"
       - "./.profile/:/home/desktop/.profile"
