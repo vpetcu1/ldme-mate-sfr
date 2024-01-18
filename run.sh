@@ -15,6 +15,7 @@ case $operation in
         cp -R .init/ home/
         cp -R .installProjects/ home/
         sudo chmod 666 /var/run/docker.sock
+        sudo cp hosts home/hosts
         COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose up --remove-orphans --force-recreate &
 		;;
 	stop)
