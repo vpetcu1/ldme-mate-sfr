@@ -5,3 +5,6 @@ Documents
 Trash
 .profile
 _cacache
+.dbus
+.nx
+.npm

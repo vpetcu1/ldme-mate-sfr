@@ -21,6 +21,7 @@ echo option=$option
 . $INIT_HOME/.env
 list=$option
 rclone config reconnect gdrive:
+sudo chown -R desktop:desktop $PROJECT_HOME_FOLDER/
 if [ "${option}" = "all" ]; then
     list=$OPTIONS
 elif ! exists_in_list "$OPTIONS" " " $option; then
