@@ -44,10 +44,3 @@ export CATALINA_HOME=$INSTALL_HOME/tomcat/apache-tomcat-7.0.109
 if [ -d "$INSTALL_HOME/vscode/VSCode-linux-x64" ] ; then
   PATH="$PATH:$INSTALL_HOME/vscode/VSCode-linux-x64"
 fi
-
-#hosts
-#if [ ! -f /etc/hosts_bak ]; then
-#    sudo mv /etc/hosts /etc/hosts_bak 
-#fi
-#sudo cp $PROJECT_HOME_FOLDER/hosts home/hosts
-
