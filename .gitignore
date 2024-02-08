@@ -1,5 +1,6 @@
 /home
 /sfr
+/LES
 **/*.exe
 **/*.exe
 installHost/win10/wsl_update_x64.msi
