@@ -9,11 +9,11 @@ case $operation in
         if [ ! -d home ]; then
             mkdir -p home
         fi
-        cp .profile home/.profile
-        cp .bashrc home/.bashrc
-        cp -R .config/ home/
-        cp -R .init/ home/
-        cp -R .installProjects/ home/
+        #cp .profile home/.profile
+        #cp .bashrc home/.bashrc
+        #cp -R .config/ home/
+        #cp -R .init/ home/
+        #cp -R .installProjects/ home/
         sudo chmod 666 /var/run/docker.sock
         COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose up --remove-orphans --force-recreate &
 		;;

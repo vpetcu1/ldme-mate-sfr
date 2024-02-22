@@ -26,8 +26,11 @@ services:
       - "./${PROJECT}/:/home/desktop/${PROJECT}/"
       - /var/run/docker.sock:/var/run/docker.sock
       - "./home/:/home/desktop"
-      - ./hosts:/etc/hosts
-      #- "./.init/:/home/desktop/.init/"
+      - "./hosts:/etc/hosts"
+      - "./.init/:/home/desktop/.init"
+      - "./.installProjects/:/home/desktop/.installProjects"
+      - "./.bashrc/:/home/desktop/.bashrc"
       - "./.profile/:/home/desktop/.profile"
+      - "./.config/rclone/rclone.conf:/home/desktop/.config/rclone/rclone.conf"
     shm_size: '2gb'
     privileged: true

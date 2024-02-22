@@ -11,6 +11,8 @@ create_tunnels () {
 	sshpass -p "$password" ssh -Nf -4 -L 3609:vi-mcc-myar-201:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
 	echo ------------ OPENNING TRP AR MySQL on 3610 localhost
 	sshpass -p "$password" ssh -Nf -4 -L 3610:vi-mcc-myar-301:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
+	echo ------------ OPENNING CONV MySQL on 3611 localhost
+	sshpass -p "$password" ssh -Nf -4 -L 3611:vi-mcc-mycnv-901:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
 	echo ------------ OPENNING Oracle on 1521 localhost
 	sshpass -p "$password" ssh -Nf -L1521:sv-mut-ora-202.int.gnp.les800:1521 "$username"@vi-mcc-dmc-201.adm.gnp.les800
 	echo ------------ OPENNING Oracle on 1522 localhost

@@ -19,14 +19,18 @@ fi
 export MAVEN_HOME=$INSTALL_HOME/maven/apache-maven-3.9.6
 export M2_HOME=$INSTALL_HOME/maven/apache-maven-3.9.6
 export M2_REPO_HOME=$INSTALL_HOME/.m2
+export M2_REPO=$INSTALL_HOME/.m2/repository
+
+export MAVEN_OPTS="$MAVEN_OPTS -Dmaven.repo.local=/home/desktop/sfr/install/.m2/repository"
+export MAVEN_OPTS="$MAVEN_OPTS -Dmaven.settings=/home/desktop/sfr/install/.m2/settings.xml"
 
 #nvm
 export NVM_DIR="$INSTALL_HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #intellij idea
-if [ -d "$INSTALL_HOME/intellij/idea-IU-233.13135.103/bin" ] ; then
-  PATH="$PATH:$INSTALL_HOME/intellij/idea-IU-233.13135.103/bin"
+if [ -d "$INSTALL_HOME/intellij/idea-IU-233.14475.28/bin" ] ; then
+  PATH="$PATH:$INSTALL_HOME/intellij/idea-IU-233.14475.28/bin"
 fi
 
 #Postman
