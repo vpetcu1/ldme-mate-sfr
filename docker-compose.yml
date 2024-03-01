@@ -31,6 +31,6 @@ services:
       - "./.installProjects/:/home/desktop/.installProjects"
       - "./.bashrc/:/home/desktop/.bashrc"
       - "./.profile/:/home/desktop/.profile"
-      - "./.config/rclone/rclone.conf:/home/desktop/.config/rclone/rclone.conf"
+      #- "./.config/rclone/rclone.conf:/home/desktop/.config/rclone/rclone.conf"
     shm_size: '2gb'
     privileged: true

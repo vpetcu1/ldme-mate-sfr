@@ -3,7 +3,7 @@ create_tunnels () {
 	echo ------------ OPENNING TUNELS
 	echo ------------ OPENNING HR MySQL on 3606 localhost
 	sshpass -p "$password" ssh -Nf -4 -L 3606:vi-mcc-mydis-201:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
-    echo ------------ OPENNING TRP MySQL on 3609 localhost
+    echo ------------ OPENNING TRP MySQL on 3607 localhost
 	sshpass -p "$password" ssh -Nf -4 -L 3607:vi-mcc-mydis-301:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
 	echo ------------ OPENNING CA MySQL on 3608 localhost
 	sshpass -p "$password" ssh -Nf -4 -L 3608:vi-mcc-myca-201:3406 "$username"@sp-mut-adm-201.adm.gnp.les800

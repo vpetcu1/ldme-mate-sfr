@@ -11,7 +11,7 @@ case $operation in
         fi
         #cp .profile home/.profile
         #cp .bashrc home/.bashrc
-        #cp -R .config/ home/
+        cp -R .config/ home/
         #cp -R .init/ home/
         #cp -R .installProjects/ home/
         sudo chmod 666 /var/run/docker.sock
