@@ -8,3 +8,4 @@ _cacache
 .dbus
 .nx
 .npm
+.config/JetBrains
