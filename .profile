@@ -7,10 +7,10 @@ export INSTALL_HOME=$PLATFORM_HOME/install
 export BACKUP_HOME=$PLATFORM_HOME/backup
 
 #java
-if [ -d "$INSTALL_HOME/java/openlogic-openjdk-8u392-b08-linux-x64/bin" ] ; then
-  PATH="$PATH:$INSTALL_HOME/java/openlogic-openjdk-8u392-b08-linux-x64/bin"
+export JAVA_HOME=$INSTALL_HOME/java/graalvm-jdk-17.0.10+11.1
+if [ -d "$JAVA_HOME/bin" ] ; then
+  PATH="$PATH:$JAVA_HOME/bin"
 fi
-export JAVA_HOME=$INSTALL_HOME/java/openlogic-openjdk-8u392-b08-linux-x64
 
 #maven
 if [ -d "$INSTALL_HOME/maven/apache-maven-3.9.6/bin" ] ; then
