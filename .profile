@@ -7,7 +7,7 @@ export INSTALL_HOME=$PLATFORM_HOME/install
 export BACKUP_HOME=$PLATFORM_HOME/backup
 
 #java
-export JAVA_HOME=$INSTALL_HOME/java/graalvm-jdk-17.0.10+11.1
+export JAVA_HOME=$INSTALL_HOME/java/openlogic-openjdk-8u392-b08-linux-x64
 if [ -d "$JAVA_HOME/bin" ] ; then
   PATH="$PATH:$JAVA_HOME/bin"
 fi
