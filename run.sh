@@ -21,7 +21,7 @@ case $operation in
 		COMPOSE_PROJECT_NAME=${PROJECT} && docker-compose down --rmi local
 		;;
 	pull)
-        docker pull vpetcu1/ldme-mate-base:${TAG}
+        docker pull vpetcu1/ldme-mate-sfr:${TAG}
         ;;
 	*)
 		echo "Must pass one of the args start|stop|pull"

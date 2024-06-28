@@ -29,8 +29,8 @@ export NVM_DIR="$INSTALL_HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #intellij idea
-if [ -d "$INSTALL_HOME/intellij/idea-IU-233.14475.28/bin" ] ; then
-  PATH="$PATH:$INSTALL_HOME/intellij/idea-IU-233.14475.28/bin"
+if [ -d "$INSTALL_HOME/intellij/idea-IU-241.14494.240/bin" ] ; then
+  PATH="$PATH:$INSTALL_HOME/intellij/idea-IU-241.14494.240/bin"
 fi
 
 #Postman
@@ -38,7 +38,7 @@ if [ -d "$INSTALL_HOME/Postman" ] ; then
   PATH="$PATH:$INSTALL_HOME/Postman"
 fi
 
-#Postman
+#Tomcat
 if [ -d "$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin" ] ; then
   PATH="$PATH:$INSTALL_HOME/tomcat/apache-tomcat-7.0.109/bin"
 fi
@@ -48,3 +48,6 @@ export CATALINA_HOME=$INSTALL_HOME/tomcat/apache-tomcat-7.0.109
 if [ -d "$INSTALL_HOME/vscode/VSCode-linux-x64" ] ; then
   PATH="$PATH:$INSTALL_HOME/vscode/VSCode-linux-x64"
 fi
+
+LANG="en_US.UTF-8"
+export LANG

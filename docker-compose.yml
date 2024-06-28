@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   ldme-mate-sfr :
-    image: "vpetcu1/ldme-mate-base:${TAG}"
+    image: "vpetcu1/ldme-mate-sfr:${TAG}"
     network_mode: "host"
     container_name: "${PROJECT}"
     hostname: ${PROJECT}
@@ -10,6 +10,7 @@ services:
     environment:
     - PASSWORD=password
     - USER=desktop
+    - LANG=en_US.UTF-8
     cap_add:
     - SYS_PTRACE
     stdin_open: true
@@ -22,7 +23,7 @@ services:
 #      - "4004:4000"
     volumes:
       - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+      #- "/etc/localtime:/etc/localtime:ro"
       - "./${PROJECT}/:/home/desktop/${PROJECT}/"
       - /var/run/docker.sock:/var/run/docker.sock
       - "./home/:/home/desktop"

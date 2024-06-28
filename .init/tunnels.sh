@@ -13,10 +13,14 @@ create_tunnels () {
 	sshpass -p "$password" ssh -Nf -4 -L 3610:vi-mcc-myar-301:3418 "$username"@sp-mut-adm-201.adm.gnp.les800
 	echo ------------ OPENNING CONV MySQL on 3611 localhost
 	sshpass -p "$password" ssh -Nf -4 -L 3611:vi-mcc-mycnv-901:3408 "$username"@sp-mut-adm-201.adm.gnp.les800
+	echo ------------ OPENNING VNX MySQL on 3612 localhost
+	sshpass -p "$password" ssh -Nf -4 -L 3612:dmc1020su-02.jmsp.prod:3406 "$username"@sp-mut-adm-201.adm.gnp.les800
+	echo ------------ OPENNING CONV AR MySQL on 3613 localhost
+	sshpass -p "$password" ssh -Nf -4 -L 3613:vi-mcc-myar-201:3419 "$username"@sp-mut-adm-201.adm.gnp.les800
 	echo ------------ OPENNING Oracle on 1521 localhost
-	sshpass -p "$password" ssh -Nf -L1521:sv-mut-ora-202.int.gnp.les800:1521 "$username"@vi-mcc-dmc-201.adm.gnp.les800
+	sshpass -p "$password" ssh -Nf -4 -L 1521:sv-mut-ora-202.int.gnp.les800:1521 "$username"@vi-mcc-dmc-201.adm.gnp.les800
 	echo ------------ OPENNING Oracle on 1522 localhost
-	sshpass -p "$password" ssh -Nf -L1522:fi-mcc-ora-302.int.gnp.les800:1522 "$username"@vi-mcc-dmc-201.adm.gnp.les800
+	sshpass -p "$password" ssh -Nf -4 -L 1522:fi-mcc-ora-302.int.gnp.les800:1522 "$username"@vi-mcc-dmc-201.adm.gnp.les800
 	echo ------------ OPENNING SSHUTLE on LDAP
 	sshuttle -r "$username:$password"@vp-mcc-dmc-201.adm.gnp.les800 10.40.66.4/32 --disable-ipv6
 }
